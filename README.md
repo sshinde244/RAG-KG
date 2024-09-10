@@ -1,5 +1,5 @@
-Retrieval Augmented Generation model using local KG and Llama3
-* made for Intelligent Systems Control Laboratory, UConn Department of Mechanical Engineering
+* Retrieval Augmented Generation model using local KG and Llama3
+(made for Intelligent Systems Control Laboratory, UConn Department of Mechanical Engineering)
 
 Note: this query answering system uses the recently deployed Meta Llama3 8B Instruct model, readily available in the HuggingFace library. The LLM is used throughout this program for text generation and question answering. For this code to work, the model must be ran on GPU.
 
