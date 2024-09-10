@@ -1,2 +1,1 @@
-# RAG-KG
-Retrieval Augmented Generation model using local KG and Llama3
+**Retrieval Augmented Generation model using local KG and Llama3**
