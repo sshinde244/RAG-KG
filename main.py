@@ -206,6 +206,6 @@ def main(dataset_file):
 
 
 if __name__ == "__main__":
-    dataset_file = r"UPDATED_TRIPLETS_DISJOINT.txt"
+    dataset_file = r"triplets.txt"
     main(dataset_file)
         
