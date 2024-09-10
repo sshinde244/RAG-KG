@@ -1,1 +1,0 @@
-print('lab2 example code')
