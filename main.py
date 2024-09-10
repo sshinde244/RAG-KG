@@ -199,13 +199,23 @@ def main(dataset_file):
     entities = ent4search(response)
     print(f"Extracted Entities List: {entities}")
     
-    # # STEP 8
-    # results = search_triplets_by_entity(kg_index, entities)
-    # print(f"Search results from KG: {results}")
-    
+    # STEP 8
+    results = search_triplets_by_entity(kg_index, entities)
+    print(f"Search results from KG: {results}")
+
+    # STEP 9
+    # Give list of entities to LLM to generate final answer
+    prompt = f'''
+    Read this entire list of triples: {results}. In a knowledge graph, these triples are all directly connected to the entities in "User_Query".
+    Formulate an answer to "User_Query" using relevant triples from this list, using your own intelligence to determine which triples are relevant to the question.
+    It is OK if not all triples are used, as long as your response is as accurate, relevant, and descriptive as possible.
+    Start your response with "Final Answer: "
+    '''
+    fin = ask_question(prompt)
+    print(fin)
 
 
 if __name__ == "__main__":
-    dataset_file = r"triplets.txt"
+    dataset_file = r"UPDATED_TRIPLETS_DISJOINT_CLEANED.txt"
     main(dataset_file)
         
